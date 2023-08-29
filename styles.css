@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+
+:root {
+    
+font-family: 'League Spartan', sans-serif;
+    
+/* Theme 1 */
+
+--t1main-background: hsl(222, 26%, 31%);
+--t1keypad-background: hsl(223, 31%, 20%);
+--t1screen-background: hsl(224, 36%, 15%);
+
+--t1-key-background: hsl(225, 21%, 49%);
+--t1key-shadow: hsl(224, 28%, 35%);
+
+--red-key: hsl(6, 63%, 50%);
+--red-key-shadow: hsl(6, 70%, 34%);
+
+--light-grayish-orange: hsl(30, 25%, 89%);
+--grayish-orange: hsl(28, 16%, 65%);
+
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: .2em;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.display{
+    background-color: var(--t1screen-background);
+    display: flex;
+    flex-direction: row-reverse;
+}
+#input-text {
+    color: #ffff;
+}
+.keys {
+    background-color: var(--light-grayish-orange);
+    border: 0;
+}
+.keys, 
+.function,
+.equal {
+    text-align: center;
+}
+.function {
+    background-color: var(--t1-key-background);
+    color: #ffff;
+    text-transform: uppercase;
+}
+[value="reset"] {
+    grid-column-start: 0;
+    grid-column-end: span 2;
+}
+.equal {
+    background-color: var(--red-key);
+    grid-column-start: 3;
+    grid-column-end: span 2;
+    
+}
+.input-container {
+    background-color: var(--t1keypad-background);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
